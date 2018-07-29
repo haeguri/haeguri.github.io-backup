@@ -187,7 +187,7 @@ function CustomTextInput(props) {
 
 위에서 [자식 컴포넌트에 ref를 추가할 수 있었지만](#adding-ref-to-class-comp), DOM 노드보다는 컴포넌트 인스턴스만을 가져오기 때문에 이것은 이상적인 해결책이 아니다. 덧붙이면 이것은 함수형 컴포넌트로도 할 수 없다.
 
-이러한 경우에서 리엑트 16.3 이상을 사용한다면 [ref forwarding](https://reactjs.org/docs/forwarding-refs.html)을 추천한다. Ref Forwarding은 컴포넌트가 자식 컴포넌트의 ref를 노출하는 것을 자식 컴포넌트들이 선택할 수 있게 한다. 자식의 DOM 노드를 부모 컴포넌트에 노출하는 방법에 대한 자세한 예제는 [ref forwarding 문서](https://reactjs.org/docs/forwarding-refs.html#forwarding-refs-to-dom-componentsV)에서 찾을 수 있다.
+이러한 경우에서 리엑트 16.3 이상을 사용한다면 [ref forwarding](https://reactjs.org/docs/forwarding-refs.html)을 추천한다. Ref Forwarding은 컴포넌트가 자식 컴포넌트의 ref를 노출하는 것을 선택할 수 있게 한다. 자식의 DOM 노드를 부모 컴포넌트에 노출하는 방법에 대한 자세한 예제는 [ref forwarding 문서](https://reactjs.org/docs/forwarding-refs.html#forwarding-refs-to-dom-componentsV)에서 찾을 수 있다.
 
 만약 리엑트 16.2 이하을 사용하거나 ref forwarding에 의해 제공되는 기능보다 유연해야 한다면, [이 대안](https://gist.github.com/gaearon/1a018a023347fe1c2476073330cc5509)을 사용하거나 다르게 명명된 prop으로 ref를 명시적으로 넘겨줄 수 있다.
 
