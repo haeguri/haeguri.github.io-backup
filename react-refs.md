@@ -32,7 +32,7 @@ Ref를 사용하면 좋은 몇 가지의 경우가 있다.
 
 Ref는 `React.createRef()`로 만들어지며 `ref` 속성으로 리엑트 엘리먼트와 연결한다. 보통 Ref는 컴포넌트가 생성될 때 인스턴스 프로퍼티로 연결되서 컴포넌트를 통해 참조될 수 있게 된다.
 
-```js
+```jsx
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -64,7 +64,7 @@ Ref의 값은 노드의 유형에 따라 달라진다.
 
 이 코드는 `ref`를 DOM 노드에 대한 참조를 저장하기 위해 사용한다.
 
-```js
+```jsx
 class CustomTextInput extends React.Component {
   constructor(props) {
     super(props);
@@ -103,7 +103,7 @@ class CustomTextInput extends React.Component {
 
 만약 위의 `CustomTextInput`을 래핑해서 컴포넌트가 마운트되면 입력이 클릭된 것처럼 하려는 경우, ref를 통해서 커스텀 입력에 접근하고, `focusTextInput` 메서드를 수동으로 호출할 수 있다.
 
-```js
+```jsx
 class AutoFocusTextInput extends React.Component {
   constructor(props) {
     super(props);
@@ -127,7 +127,7 @@ class AutoFocusTextInput extends React.Component {
 
 `CustomTextInput`이 클래스로서 선언되어야만 동작할 수 있음을 유의해라.
 
-```js
+```jsx
 class CustomTextInput extends React.Component {
   // ...
 }
@@ -137,9 +137,9 @@ class CustomTextInput extends React.Component {
 
 함수형 컴포넌트들은 인스턴스가 없기 때문에 ** `ref` 속성을 가질 수 없을 것이다.**
 
-```js
+```jsx
 function MyFunctionalComponent() {
-  return <input />;
+    return <input />;
 }
 
 class Parent extends React.Component {
@@ -160,7 +160,7 @@ class Parent extends React.Component {
 
 그러나 DOM 엘리먼트 혹은 클래스 컴포넌트를 참조한다면 **함수형 컴포넌트 내에서  ref 속성을 사용할 수 있다**.
 
-```js
+```jsx
 function CustomTextInput(props) {
   // textInput must be declared here so the ref can refer to it
     // textInput은 여기서 선언되어야 ref가 DOM 엘리먼트를 참조할 수 있다.
@@ -204,7 +204,7 @@ function CustomTextInput(props) {
 
 아래의 예제는 인스턴스 프로퍼티에서 DOM 노드에 접근할 참조를 저장하기 위한 `ref` 콜백을 사용하는 일반적인 패턴을 구현한다. 
 
-```js
+```jsx
 class CustomTextInput extends React.Component {
   constructor(props) {
     super(props);
@@ -251,7 +251,7 @@ class CustomTextInput extends React.Component {
 
 `React.createRef()`로 만든 객체 Ref와 같이 컴포넌트 사이에서 Ref 콜백을 넘겨줄 수 있다. 컴포넌트 사이에서 콜백을 호출할 수 있다
 
-```js
+```jsx
 function CustomTextInput(props) {
   return (
     <div>
