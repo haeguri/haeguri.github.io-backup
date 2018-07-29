@@ -116,16 +116,14 @@ class AutoFocusTextInput extends React.Component {
   }
 
   render() {
-
     return (
-    
       <CustomTextInput ref={this.textInput} />
     );
   }
 }
 ```
 
-`CustomTextInput`이 클래스로서 선언되어야만 동작할 수 있음을 유의해라.
+`CustomTextInput`가 클래스로서 선언되어야만 동작할 수 있음을 유의해라.
 
 ```jsx
 class CustomTextInput extends React.Component {
@@ -158,7 +156,7 @@ class Parent extends React.Component {
 
 만약 컴포넌트에 대한 ref가 필요하다면 라이프 사이클 메서드나 상태가 필요할 경우와 마찬가지로 함수형 컴포넌트들은 클래스로 변환해야 한다.
 
-그러나 DOM 엘리먼트 혹은 클래스 컴포넌트를 참조한다면 **함수형 컴포넌트 내에서  ref 속성을 사용할 수 있다**.
+그러나 **함수형 컴포넌트 내에서** DOM 엘리먼트 혹은 클래스 컴포넌트를 참조한다면 ref 속성을 사용할 수 있다**.
 
 ```jsx
 function CustomTextInput(props) {
