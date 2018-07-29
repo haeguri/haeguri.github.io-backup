@@ -162,8 +162,7 @@ class Parent extends React.Component {
 
 ```jsx
 function CustomTextInput(props) {
-  // textInput must be declared here so the ref can refer to it
-    // textInput은 여기서 선언되어야 ref가 DOM 엘리먼트를 참조할 수 있다.
+  // textInput은 여기서 선언되어야 ref가 DOM 엘리먼트를 참조할 수 있다.
   let textInput = React.createRef();
   function handleClick() {
     textInput.current.focus();
