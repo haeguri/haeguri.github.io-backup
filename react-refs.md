@@ -278,7 +278,7 @@ class Parent extends React.Component {
 예전에 리엑트를 사용했다면 `ref` 속성이 `”textInput"`과 같이 문자열이고, DOM 노드를 this.refs.textInput으로 접근하는 오래된 API에 더 친숙할 것이다. 문자열 Ref는 [어떤 이슈](https://github.com/facebook/react/pull/8333#issuecomment-271648615)들을 가져서 레거시로 간주됐고, 앞으로의 릴리즈에서 제거될 것이기 때문에 문자열 Ref를 사용하는 일은 피해라
 
 > **주의**
-> Ref에 접근하기 위해 this.refs.textInput를 사용하고 있다면, [콜백 패턴](#callback-refs)이나 [createRef API](#creating-refs)를 대신에 사용할 것을 권장한다.
+> Ref에 접근하기 위해 `this.refs.textInput`를 사용하고 있다면, [콜백 패턴](#callback-refs)이나 [createRef API](#creating-refs)를 대신에 사용할 것을 권장한다.
 
 ### Callback Refs를 사용할 때 주의사항
 
