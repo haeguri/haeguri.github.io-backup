@@ -1,8 +1,8 @@
 ---
-title: React and the DOM 번역자료
+title: Refs and the DOM 번역자료
 ---
 
-> 리엑트 문서의 "React and the DOM"을 번역한 자료 
+> 리엑트 문서의 "Refs and the DOM"을 번역한 자료 
 > 원문 : https://reactjs.org/docs/refs-and-the-dom.html
 
 Ref는 DOM 노드 혹은 `render` 메서드로 생성된 리엑트 엘리먼트에 접근할 수 있는 방법을 제공한다.
@@ -195,7 +195,7 @@ function CustomTextInput(props) {
 
 ### <a id="callback-refs"></a> Callback Refs
 
-리엑트는 Ref를 설정하기 위한 또 다른 방법인 `callback refs’를 제공한다. ‘callback refs’는 Ref가 설정되고 해제될 때 더욱 세세한 제어를 하게 한다.
+리엑트는 Ref를 설정하기 위한 또 다른 방법인 'callback refs'를 제공한다. 'callback refs'는 Ref가 설정되고 해제될 때 더욱 세세한 제어를 하게 한다.
 
 `createRef( )`로 만든 `ref`속성을 넘겨주는 대신에, 함수를 넘겨줄 수 있다. 함수는 리엑트 컴포넌트 인스턴스 혹은 HTML DOM 엘리먼트를 인자로 받는다. 그리고 인자는 다른 곳에 저장하고, 접근할 수 있다.
 
@@ -272,7 +272,7 @@ class Parent extends React.Component {
 
 ### 레거시 API: 문자열 Ref
 
-예전에 리엑트를 사용했다면 `ref` 속성이 `”textInput"`과 같이 문자열이고, DOM 노드를 this.refs.textInput으로 접근하는 오래된 API에 더 친숙할 것이다. 문자열 Ref는 [어떤 이슈](https://github.com/facebook/react/pull/8333#issuecomment-271648615)들을 가져서 레거시로 간주됐고, 앞으로의 릴리즈에서 제거될 것이기 때문에 문자열 Ref를 사용하는 일은 피해라
+예전에 리엑트를 사용했다면 `ref` 속성이 `”textInput"`과 같이 문자열이고, DOM 노드를 `this.refs.textInput`으로 접근하는 오래된 API에 더 친숙할 것이다. 문자열 Ref는 [어떤 이슈](https://github.com/facebook/react/pull/8333#issuecomment-271648615)들을 가져서 레거시로 간주됐고, 앞으로의 릴리즈에서 제거될 것이기 때문에 문자열 Ref를 사용하는 일은 피해라
 
 > **주의**
 > Ref에 접근하기 위해 `this.refs.textInput`를 사용하고 있다면, [콜백 패턴](#callback-refs)이나 [createRef API](#creating-refs)를 대신에 사용할 것을 권장한다.
